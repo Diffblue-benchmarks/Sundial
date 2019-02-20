@@ -1,0 +1,374 @@
+# Tested on Deeptest release 1.12.0
+cbmcArguments:
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+  string-printable: true
+units:
+  - target:
+    - dir: target/classes
+      file: org/quartz/core/QuartzSchedulerThread.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/QuartzSchedulerThread.java
+    # Child of QuartzSchedulerThread.class
+    - dir: target/classes
+      file: org/quartz/QuartzScheduler.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/QuartzScheduler.java
+    # Child of QuartzSchedulerThread.class
+    - dir: target/classes
+      file: org/quartz/exceptions/JobPersistenceException.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/exceptions/JobPersistenceException.java
+    # Child of QuartzSchedulerThread.class
+    - dir: target/classes
+      file: org/quartz/exceptions/SchedulerException.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/exceptions/SchedulerException.java
+    # Child of QuartzSchedulerThread.class
+    - dir: target/classes
+      file: org/quartz/triggers/OperableTrigger.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/triggers/OperableTrigger.java
+    # Child of QuartzSchedulerThread.class
+    - dir: target/classes
+      file: org/quartz/triggers/Trigger.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/triggers/Trigger.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/core/JobRunShell.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/JobRunShell.java
+    # Child of JobRunShell.class
+    - dir: target/classes
+      file: org/quartz/exceptions/JobExecutionException.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/exceptions/JobExecutionException.java
+    # Child of JobRunShell.class
+    - dir: target/classes
+      file: org/quartz/jobs/Job.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/Job.java
+    # Child of JobRunShell.class
+    - dir: target/classes
+      file: org/quartz/jobs/JobDetail.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/JobDetail.java
+    # Child of JobRunShell.class
+    - dir: target/classes
+      file: org/quartz/listeners/SchedulerListenerSupport.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/SchedulerListenerSupport.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/plugins/xml/XMLSchedulingDataProcessor.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/plugins/xml/XMLSchedulingDataProcessor.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/knowm/sundial/Job.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/Job.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/builders/CronTriggerBuilder.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/builders/CronTriggerBuilder.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/builders/SimpleTriggerBuilder.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/builders/SimpleTriggerBuilder.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/classloading/ClassLoadHelper.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/classloading/ClassLoadHelper.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/core/Scheduler.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/Scheduler.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/exceptions/ObjectAlreadyExistsException.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/exceptions/ObjectAlreadyExistsException.java
+    # Child of XMLSchedulingDataProcessor.class
+    - dir: target/classes
+      file: org/quartz/triggers/SimpleTrigger.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/triggers/SimpleTrigger.java
+  - target:
+    - dir: target/classes
+      file: org/knowm/sundial/plugins/AnnotationJobTriggerPlugin.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/plugins/AnnotationJobTriggerPlugin.java
+    # Child of AnnotationJobTriggerPlugin.class
+    - dir: target/classes
+      file: org/knowm/sundial/annotations/CronTrigger.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/annotations/CronTrigger.java
+    # Child of AnnotationJobTriggerPlugin.class
+    - dir: target/classes
+      file: org/knowm/sundial/annotations/SimpleTrigger.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/annotations/SimpleTrigger.java
+    # Child of AnnotationJobTriggerPlugin.class
+    - dir: target/classes
+      file: org/quartz/jobs/JobDataMap.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/JobDataMap.java
+    # Child of AnnotationJobTriggerPlugin.class
+    - dir: target/classes
+      file: org/quartz/plugins/SchedulerPlugin.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/plugins/SchedulerPlugin.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/triggers/CronExpression.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/triggers/CronExpression.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/core/SimpleThreadPool.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/SimpleThreadPool.java
+    # Child of SimpleThreadPool.class
+    - dir: target/classes
+      file: org/quartz/exceptions/SchedulerConfigException.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/exceptions/SchedulerConfigException.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/core/RAMJobStore.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/RAMJobStore.java
+  - target:
+    - dir: target/classes
+      file: org/knowm/sundial/ee/SundialInitializerListener.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/ee/SundialInitializerListener.java
+    # Child of SundialInitializerListener.class
+    - dir: target/classes
+      file: org/knowm/sundial/SundialJobScheduler.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/SundialJobScheduler.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/QuartzScheduler.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/QuartzScheduler.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/classloading/CascadingClassLoadHelper.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/classloading/CascadingClassLoadHelper.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/Calendar.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/Calendar.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/JobExecutionContext.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/JobExecutionContext.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/QuartzSchedulerResources.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/QuartzSchedulerResources.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/QuartzSchedulerThread.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/QuartzSchedulerThread.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/SchedulerSignaler.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/SchedulerSignaler.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/core/SchedulerSignalerImpl.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/SchedulerSignalerImpl.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/jobs/InterruptableJob.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/InterruptableJob.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/jobs/JobFactory.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/JobFactory.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/jobs/SimpleJobFactory.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/SimpleJobFactory.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/listeners/JobListener.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/JobListener.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/listeners/ListenerManager.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/ListenerManager.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/listeners/ListenerManagerImpl.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/ListenerManagerImpl.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/listeners/SchedulerListener.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/SchedulerListener.java
+    # Child of QuartzScheduler.class
+    - dir: target/classes
+      file: org/quartz/listeners/TriggerListener.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/listeners/TriggerListener.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/jobs/SimpleJobFactory.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/SimpleJobFactory.java
+    # Child of SimpleJobFactory.class
+    - dir: target/classes
+      file: org/quartz/core/TriggerFiredBundle.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/TriggerFiredBundle.java
+  - target:
+    - dir: target/classes
+      file: org/knowm/sundial/SundialJobScheduler.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/SundialJobScheduler.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/classloading/CascadingClassLoadHelper.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/classloading/CascadingClassLoadHelper.java
+  - target:
+    - dir: target/classes
+      file: org/knowm/sundial/Job.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/Job.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/jobs/Job.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/jobs/Job.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/core/SchedulerFactory.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/core/SchedulerFactory.java
+    # Child of SchedulerFactory.class
+    - dir: target/classes
+      file: org/knowm/sundial/plugins/AnnotationJobTriggerPlugin.class
+      sourceDir: src/main/java
+      sourceFile: org/knowm/sundial/plugins/AnnotationJobTriggerPlugin.java
+    # Child of SchedulerFactory.class
+    - dir: target/classes
+      file: org/quartz/plugins/management/ShutdownHookPlugin.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/plugins/management/ShutdownHookPlugin.java
+    # Child of SchedulerFactory.class
+    - dir: target/classes
+      file: org/quartz/plugins/xml/XMLSchedulingDataProcessorPlugin.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/plugins/xml/XMLSchedulingDataProcessorPlugin.java
+  - target:
+    - dir: target/classes
+      file: org/quartz/triggers/SimpleTriggerImpl.class
+      sourceDir: src/main/java
+      sourceFile: org/quartz/triggers/SimpleTriggerImpl.java
+phases:
+-
+  timeout: 60
+  cbmcArguments:
+    max-nondet-array-length: 10
+    unwind: 1
+    string-non-empty: true
+    java-assume-inputs-non-null: true
+-
+  timeout: 60
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    max-nondet-array-length: 10
+    unwind: 1
+-
+  timeout: 60
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    max-nondet-array-length: 20
+    unwind: 2
+    string-non-empty: true
+    java-assume-inputs-non-null: true
+-
+  timeout: 60
+  cbmcArguments:
+    classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 60
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
+    string-non-empty: true
+    java-assume-inputs-non-null: true
+-
+  timeout: 60
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
+-
+  timeout: 120
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    string-non-empty: true
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 4
+    load-containing-class-only: true
+    string-non-empty: true
+    java-assume-inputs-non-null: true
+-
+  timeout: 120
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    string-non-empty: true
+    max-nondet-array-length: 50
+    max-nondet-string-length: 50
+    unwind: 4
+    load-containing-class-only: true
+-
+  timeout: 120
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    string-non-empty: true
+    max-nondet-array-length: 60
+    max-nondet-string-length: 60
+    unwind: 8
+    string-non-empty: true
+    java-assume-inputs-non-null: true
+-
+  timeout: 120
+  cbmcArguments:
+    classpath: '/tools/cbmc/models.jar:.'
+    string-non-empty: true
+    max-nondet-array-length: 100
+    max-nondet-string-length: 100
+    unwind: 8
